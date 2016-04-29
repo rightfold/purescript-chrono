@@ -20,5 +20,9 @@
     "purescript-prelude": "^0.1.5",
     "purescript-monoid": "^0.3.2",
     "purescript-maybe": "^0.3.5"
+  },
+  "devDependencies": {
+    "purescript-assert": "^0.1.1",
+    "purescript-console": "^0.1.1"
   }
 }

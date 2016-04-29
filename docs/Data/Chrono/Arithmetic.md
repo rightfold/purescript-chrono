@@ -64,7 +64,7 @@ instantSubInstant :: Instant -> Instant -> Duration
 #### `(~+!)`
 
 ``` purescript
-infixl 6 instantAddDuration as ~+!
+infixl 6 durationAddInstant as ~+!
 ```
 
 _left-associative / precedence 6_
@@ -72,7 +72,7 @@ _left-associative / precedence 6_
 #### `(~+~)`
 
 ``` purescript
-infixl 6 instantAddDuration as ~+~
+infixl 6 durationAddDuration as ~+~
 ```
 
 _left-associative / precedence 6_
@@ -80,7 +80,7 @@ _left-associative / precedence 6_
 #### `(~-~)`
 
 ``` purescript
-infixl 6 instantSubDuration as ~-~
+infixl 6 durationSubDuration as ~-~
 ```
 
 _left-associative / precedence 6_

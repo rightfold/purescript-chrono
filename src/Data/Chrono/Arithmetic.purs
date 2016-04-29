@@ -46,9 +46,9 @@ instantSubDuration (Instant i) (Duration d) = Instant (i - d)
 instantSubInstant :: Instant -> Instant -> Duration
 instantSubInstant (Instant a) (Instant b) = Duration (a - b)
 
-infixl 6 instantAddDuration as ~+!
-infixl 6 instantAddDuration as ~+~
-infixl 6 instantSubDuration as ~-~
+infixl 6 durationAddInstant as ~+!
+infixl 6 durationAddDuration as ~+~
+infixl 6 durationSubDuration as ~-~
 infixl 7 durationMulNumber as ~*@
 infixl 7 durationDivNumber as ~/@
 infixl 7 durationDivDuration as ~/~
