@@ -4,6 +4,11 @@
   "moduleType": [
     "node"
   ],
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rightfold/purescript-chrono.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
