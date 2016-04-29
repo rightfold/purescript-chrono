@@ -1,3 +1,9 @@
+-- | `Data.Chrono` implements a versatile time library.
+-- |
+-- | `Data.Chrono` has some limitations:
+-- |
+-- |  - Only the Gregorian calendar is supported.
+-- |  - Relativity is not considered.
 module Data.Chrono
 ( module Data.Chrono.Arithmetic
 , module Data.Chrono.Clock
