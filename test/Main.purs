@@ -11,6 +11,10 @@ import Test.Assert (ASSERT, assert)
 main :: forall eff. Eff (assert :: ASSERT, console :: CONSOLE | eff) Unit
 main = do
   group "arithmetic" do
+    assert $ Instant 1000.0 !+~ fromSeconds 2.0 == Instant 3000.0
+    assert $ Instant 1000.0 !-~ fromSeconds 2.0 == Instant (-1000.0)
+    assert $ Instant 1000.0 !-! Instant 2000.0 == fromSeconds (-1.0)
+    assert $ fromSeconds 1.0 ~+! Instant 2000.0 == Instant 3000.0
     assert $ fromSeconds 1.0 ~+~ fromSeconds 2.0 == fromSeconds 3.0
     assert $ fromSeconds 1.0 ~-~ fromSeconds 2.0 == fromSeconds (-1.0)
     assert $ fromSeconds 1.0 ~*@ 2.0 == fromSeconds 2.0
