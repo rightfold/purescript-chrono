@@ -8,7 +8,7 @@ module Data.Chrono
 ( module Data.Chrono.Arithmetic
 , module Data.Chrono.Clock
 , module Data.Chrono.Duration
-, module Data.Chrono.Era
+, module Data.Chrono.Gregorian
 , module Data.Chrono.Instant
 , module Data.Chrono.LocalDate
 , module Data.Chrono.LocalTime
@@ -18,7 +18,7 @@ module Data.Chrono
 import Data.Chrono.Arithmetic
 import Data.Chrono.Clock
 import Data.Chrono.Duration
-import Data.Chrono.Era
+import Data.Chrono.Gregorian
 import Data.Chrono.Instant
 import Data.Chrono.LocalDate
 import Data.Chrono.LocalTime
