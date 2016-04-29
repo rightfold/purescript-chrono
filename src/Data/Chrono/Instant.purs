@@ -1,11 +1,13 @@
 module Data.Chrono.Instant
-( Instant
+( Instant(Instant)
 ) where
 
 import Data.Int53 (Int53)
 import Prelude
 
 -- | A moment in time on the universal non-relativistic timeline.
+-- |
+-- | Representation: milliseconds since Unix epoch.
 newtype Instant = Instant Int53
 
 instance eqInstant :: Eq Instant where

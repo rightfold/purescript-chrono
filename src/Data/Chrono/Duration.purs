@@ -1,5 +1,5 @@
 module Data.Chrono.Duration
-( Duration
+( Duration(Duration)
 ) where
 
 import Data.Int53 (Int53)
@@ -8,6 +8,8 @@ import Data.Monoid (class Monoid)
 import Prelude
 
 -- | A concrete duration.
+-- |
+-- | Representation: milliseconds.
 newtype Duration = Duration Int53
 
 instance eqDuration :: Eq Duration where
