@@ -1,19 +1,19 @@
 -- | The following symbols are used in these operators:
 -- |
 -- | <dl>
--- | <dt><code>+</code></td>
+-- | <dt><code>+</code></dt>
 -- | <dd>Add</dd>
--- | <dt><code>-</code></td>
+-- | <dt><code>-</code></dt>
 -- | <dd>Subtract</dd>
--- | <dt><code>*</code></td>
+-- | <dt><code>*</code></dt>
 -- | <dd>Multiply</dd>
--- | <dt><code>/</code></td>
+-- | <dt><code>/</code></dt>
 -- | <dd>Divide</dd>
--- | <dt><code>!</code></td>
+-- | <dt><code>!</code></dt>
 -- | <dd><code>Instant</code></dd>
--- | <dt><code>~</code></td>
+-- | <dt><code>~</code></dt>
 -- | <dd><code>Duration</code></dd>
--- | <dt><code>@</code></td>
+-- | <dt><code>@</code></dt>
 -- | <dd><code>Int53</code> (typically a factor, not milliseconds)</dd>
 -- | </dl>
 module Data.Chrono.Arithmetic
