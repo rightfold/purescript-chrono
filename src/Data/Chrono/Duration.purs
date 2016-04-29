@@ -1,10 +1,15 @@
 module Data.Chrono.Duration
 ( Duration(Duration)
 
-, milliseconds
-, seconds
-, minutes
-, hours
+, fromMilliseconds
+, fromSeconds
+, fromMinutes
+, fromHours
+
+, toMilliseconds
+, toSeconds
+, toMinutes
+, toHours
 ) where
 
 import Data.Monoid (class Monoid)
@@ -15,17 +20,29 @@ import Prelude
 -- | Representation: milliseconds.
 newtype Duration = Duration Number
 
-milliseconds :: Duration -> Number
-milliseconds (Duration d) = d
+fromMilliseconds :: Number -> Duration
+fromMilliseconds = Duration
 
-seconds :: Duration -> Number
-seconds = milliseconds >>> (_ / 1000.0)
+fromSeconds :: Number -> Duration
+fromSeconds = (_ * 1000.0) >>> fromMilliseconds
 
-minutes :: Duration -> Number
-minutes = seconds >>> (_ / 60.0)
+fromMinutes :: Number -> Duration
+fromMinutes = (_ * 60.0) >>> fromSeconds
 
-hours :: Duration -> Number
-hours = minutes >>> (_ / 60.0)
+fromHours :: Number -> Duration
+fromHours = (_ * 60.0) >>> fromMinutes
+
+toMilliseconds :: Duration -> Number
+toMilliseconds (Duration d) = d
+
+toSeconds :: Duration -> Number
+toSeconds = toMilliseconds >>> (_ / 1000.0)
+
+toMinutes :: Duration -> Number
+toMinutes = toSeconds >>> (_ / 60.0)
+
+toHours :: Duration -> Number
+toHours = toMinutes >>> (_ / 60.0)
 
 instance eqDuration :: Eq Duration where
   eq (Duration a) (Duration b) = a == b
