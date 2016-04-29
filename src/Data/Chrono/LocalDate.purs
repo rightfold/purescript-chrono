@@ -10,11 +10,11 @@ module Data.Chrono.LocalDate
 import Data.Chrono.Gregorian (Era, Month, Year)
 import Data.Maybe (Maybe(Just, Nothing))
 
-data LocalDate = LocalDate { era :: Era
-                           , year :: Year
-                           , month :: Month
-                           , day :: Int
-                           }
+newtype LocalDate = LocalDate { era :: Era
+                              , year :: Year
+                              , month :: Month
+                              , day :: Int
+                              }
 
 localDate :: Era -> Year -> Month -> Int -> Maybe LocalDate
 localDate era year month day = Just (LocalDate {era, year, month, day})
