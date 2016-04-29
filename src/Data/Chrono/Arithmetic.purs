@@ -21,6 +21,7 @@ module Data.Chrono.Arithmetic
 , (!-~), instantSubDuration
 , (!-!), instantSubInstant
 
+, (~+!), durationAddInstant
 , (~+~), durationAddDuration
 , (~-~), durationSubDuration
 , (~*@), durationMulInt53
@@ -46,11 +47,15 @@ instantSubDuration (Instant i) (Duration d) = Instant (i - d)
 instantSubInstant :: Instant -> Instant -> Duration
 instantSubInstant (Instant a) (Instant b) = Duration (a - b)
 
+infixl 6 instantAddDuration as ~+!
 infixl 6 instantAddDuration as ~+~
 infixl 6 instantSubDuration as ~-~
 infixl 7 durationMulInt53 as ~*@
 infixl 7 durationDivInt53 as ~/@
 infixl 7 durationDivDuration as ~/~
+
+durationAddInstant :: Duration -> Instant -> Instant
+durationAddInstant = flip instantAddDuration
 
 durationAddDuration :: Duration -> Duration -> Duration
 durationAddDuration (Duration a) (Duration b) = Duration (a + b)
