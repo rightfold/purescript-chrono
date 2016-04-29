@@ -4,11 +4,11 @@ module Data.Chrono.Gregorian
 , Month(..)
 ) where
 
-import Data.NonZero (NonZero)
+import Data.Positive (Positive)
 
 data Era = BeforeChrist | AnnoDomini
 
-type Year = NonZero Int
+type Year = Positive Int
 
 data Month = January | February | March | April | May | June
            | July | August | September | October | November | December

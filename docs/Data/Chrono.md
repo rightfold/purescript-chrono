@@ -258,7 +258,7 @@ data Month
 #### `Year`
 
 ``` purescript
-type Year = NonZero Int
+type Year = Positive Int
 ```
 
 ### Re-exported from Data.Chrono.Instant:

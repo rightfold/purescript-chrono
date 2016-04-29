@@ -11,7 +11,7 @@ data Era
 #### `Year`
 
 ``` purescript
-type Year = NonZero Int
+type Year = Positive Int
 ```
 
 #### `Month`
