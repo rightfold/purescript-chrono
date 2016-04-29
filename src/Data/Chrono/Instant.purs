@@ -5,7 +5,7 @@ module Data.Chrono.Instant
 import Data.Int53 (Int53)
 import Prelude
 
--- | A moment in type on a universal non-relativistic timeline.
+-- | A moment in time on the universal non-relativistic timeline.
 newtype Instant = Instant Int53
 
 instance eqInstant :: Eq Instant where
