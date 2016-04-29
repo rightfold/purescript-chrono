@@ -1,0 +1,18 @@
+{
+  "name": "purescript-chrono",
+  "version": "1.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-eff": "^0.1.2",
+    "purescript-prelude": "^0.1.5",
+    "purescript-int-53": "^1.1.0"
+  }
+}
