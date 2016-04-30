@@ -13,4 +13,4 @@ type Clock m = m Instant
 -- | The effect of reading the system time.
 foreign import data SYSTEM_CLOCK :: !
 
-foreign import systemClock :: Clock (Eff (systemClock :: SYSTEM_CLOCK))
+foreign import systemClock :: forall eff. Clock (Eff (systemClock :: SYSTEM_CLOCK | eff))
